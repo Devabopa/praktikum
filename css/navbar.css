@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    color: white;
+    min-height: 2000px;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+}
+
+.navbar .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.navbar .logo-image {
+    width: 100px;
+    height: auto;
+}
+
+.navbar .navbar-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar .navbar-item a {
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    margin: 0 15px;
+}
+
+.navbar .navbar-item a:hover {
+    color: rgb(255, 207, 0);
+}
+
+.navbar .navbar-item a::after {
+    content: '';
+    display: block;
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(255, 207, 0);
+    transform: scaleX(0);
+    transition: 0.3s linear;
+}
+
+.navbar .navbar-item a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: white;
+}
+
+.navbar .navbar-extra a:hover {
+    color: rgb(255, 207, 0);
+}
+
+#menu {
+    display: none;
+}
+
+/* hero section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('../background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .content {}
+
+.hero .content h1 {
+    font-size: 60px;
+
+}
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #menu {
+        display: inline-block;
+    }
+
+    .navbar-item {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgb(255, 207, 0);
+        width: 300px;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-item.active {
+        right: 0;
+    }
+
+    .navbar .navbar-item a {
+        color: #222;
+        display: block;
+        margin: 24px;
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .navbar .navbar-item a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-item a:hover::after {
+        transform: scaleX(0.2);
+    }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
