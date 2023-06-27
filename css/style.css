@@ -11,7 +11,7 @@
 body {
     font-family: 'poppins', sans-serif;
     color: white;
-    min-height: 2000px;
+    min-height: 3000px;
 }
 
 /* navbar */
@@ -84,20 +84,108 @@ body {
 }
 
 /* hero section */
-.hero {
-    min-height: 100vh;
+.homepage1 {
+    height: 90vh;
     display: flex;
     align-items: center;
-    background-image: url('../background.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.hero .content {}
+.homepage1 .content {
+    overflow-x: hidden;
+    padding: 100px 50px;
+    margin: auto;
+}
 
-.hero .content h1 {
+.homepage1 .content h1 {
     font-size: 60px;
+    line-height: 25px;
+    margin-bottom: 15px;
+    font-family: Gotham Black;
+}
 
+.homepage1 .content h2 {
+    font-size: 80px;
+    margin-bottom: 15px;
+    color: #ffcf00;
+    font-family: Gotham Black;
+    font-style: italic;
+}
+
+.homepage1 .content p {
+    font-size: 20px;
+    max-width: 700px;
+}
+
+.team-button {
+    top: 72vh;
+    width: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.btn-team {
+    height: 100%;
+    object-fit: contain;
+    width: 100%;
+}
+
+.homepage2 {
+    height: 90vh;
+    background-image: linear-gradient(rgba(212, 176, 18, 0.9), rgba(212, 176, 18, 0.9)), url(../backgorund2.png);
+    align-items: center;
+    background-position: top;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+}
+
+.homepage3 {
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../background3.png);
+    background-position: 50%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.homepage3 .content {
+    overflow-x: hidden;
+    padding: 100px 50px;
+    width: 1000px;
+}
+
+.homepage3 .visi-container {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.homepage3 .content h2 {
+    font-size: 45px;
+    font-family: Gotham black;
+    font-style: italic;
+    margin-right: 8px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.homepage3 .content h2 span {
+    color: #ffcf00;
+}
+
+.homepage3 .content p {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 0 100px;
+}
+
+.homepage3 .misi-container {
+    text-align: center;
 }
 
 /* media queries */
@@ -107,6 +195,7 @@ body {
     html {
         font-size: 75%;
     }
+
 }
 
 /* tablet */
@@ -134,11 +223,11 @@ body {
     }
 
     .navbar .navbar-item a {
-        color: #222;
+        color: black;
         display: block;
         margin: 24px;
-        padding: 8px;
-        font-size: 16px;
+        padding: 4px;
+        font-size: 18px;
     }
 
     .navbar .navbar-item a::after {
@@ -147,6 +236,14 @@ body {
 
     .navbar .navbar-item a:hover::after {
         transform: scaleX(0.2);
+    }
+
+    .navbar .navbar-item a {
+        color: black;
+    }
+
+    .navbar .navbar-item a:hover {
+        color: white
     }
 }
 
